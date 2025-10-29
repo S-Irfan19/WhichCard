@@ -1,0 +1,133 @@
+<div class="page-bg">
+    <nav class="navbar navbar-expand-sm fixed-top">
+      <div class=" nav-height">
+        <div class="d-flex flex-row container-fluid">
+        <div style="width: 1400px;">
+       
+        <a class=" navbar-brand text-light mt-4" href="#">
+          WhichCard?
+          <!-- <img src="../../assets/images/logo1.jpeg" alt="" width="150px" height="100px" > -->
+        </a>
+       
+        <p class=" navbar-brand text-light mt-4" (click)="toBrowsCards()">
+          Browse Cards
+        </p>
+       </div>
+      
+        <div>
+          <a href="#" class="btn  btn-lg p-4 mt-2  user-b {{account}}">
+            <span class="glyphicon glyphicon-user user-i"></span> 
+          </a>
+         
+        </div>
+        <div class="p-3 {{account}}">
+          <button type="button" class="btn btn-outline-light p-3 logout-b nav-button" (click)="logOut()">log out</button>
+        </div>
+        </div>
+     </div>
+    </nav>
+   
+    <div class="full-page">
+        <div class="page-header">
+          <h1 class="page-title">Browse Credit Cards</h1>
+          <p class="page-subtitle">Compare and find the perfect credit card for your needs</p>
+        </div>
+        
+        <div class="grid-container">
+          <div class="grid-item" *ngFor="let card of cards">
+            <div class="card margin-top">
+              <div class="card-image">
+                <img [src]="card.image" [alt]="card.name" (error)="onImageError($event)" class="card-img">
+              </div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <h3 class="card-title">{{ card.name }}</h3>
+                  <div class="card-badges">
+                    <span class="card-issuer">{{ card.issuer }}</span>
+                    <span class="card-category">{{ card.category }}</span>
+                  </div>
+                </div>
+
+                <div class="card-details">
+                  <div class="detail-row">
+                    <span class="detail-label">APR:</span>
+                    <span class="detail-value">{{ card.apr }}</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="detail-label">Annual Fee:</span>
+                    <span class="detail-value">{{ card.annualFee }}</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="detail-label">Rewards:</span>
+                    <span class="detail-value">{{ card.rewards }}</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="detail-label">Sign-up Bonus:</span>
+                    <span class="detail-value bonus">{{ card.signupBonus }}</span>
+                  </div>
+                </div>
+
+                <div class="card-description">
+                  <p>{{ card.description }}</p>
+                </div>
+
+                <div class="card-actions">
+                  <button class="action-btn details-btn" (click)="viewDetails(card)">
+                    <i class="icon">📋</i>
+                    View Details
+                  </button>
+                  <button class="action-btn compare-btn" 
+                          (click)="addToCompare(card)"
+                          [class.added-to-compare]="isInComparison(card)">
+                    <i class="icon">⚖️</i>
+                    <span *ngIf="isInComparison(card)">Added ✓</span>
+                    <span *ngIf="!isInComparison(card)">Compare</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-panel fixed-right">
+          <h3 class="px-3 mt-3">In Comparison ({{ comparisonItems.length }})</h3>
+
+          <div class="comparison-list" *ngIf="comparisonItems.length > 0; else emptyState">
+            <div class="comparison-item" *ngFor="let item of comparisonItems; let i = index">
+              <div class="item-info">
+                <div class="item-placeholder">
+                  <div class="item-icon">💳</div>
+                </div>
+                <div class="item-details">
+                  <div class="item-name">{{ item.name }}</div>
+                  <div class="item-issuer">{{ item.issuer }}</div>
+                  <div class="item-category">{{ item.category }}</div>
+                  <div class="item-fee">{{ item.annualFee }}</div>
+                </div>
+              </div>
+              <button class="remove-btn" (click)="removeFromComparison(i)" title="Remove from comparison">
+                ✕
+              </button>
+            </div>
+          </div>
+
+          <ng-template #emptyState>
+            <div class="empty-state">
+              <div class="empty-icon">⚖️</div>
+              <p>No cards selected for comparison</p>
+              <small>Click "Compare" on any card to add it here</small>
+            </div>
+          </ng-template>
+
+          <div class="sidebar-actions" *ngIf="comparisonItems.length > 0">
+            <button class="btn-format" (click)="compare()" [disabled]="comparisonItems.length < 2">
+              <span *ngIf="comparisonItems.length < 2">Need 2+ cards to compare</span>
+              <span *ngIf="comparisonItems.length >= 2">Compare Cards</span>
+            </button>
+            <button class="clear-btn" (click)="clearComparison()">
+              Clear All
+            </button>
+          </div>
+        </div>
+    

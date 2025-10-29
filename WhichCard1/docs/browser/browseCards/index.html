@@ -1,0 +1,743 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>card</title>
+  <style>
+  </style>
+  <base href="/">
+  <meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="pragma" content="no-cache">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+/*# sourceMappingURL=app.component.css.map */</style><style ng-app-id="ng">
+
+.nav-height[_ngcontent-ng-c3144394989] {
+  height: 80px;
+  width: 100%;
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+.grid-container[_ngcontent-ng-c3144394989] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 2rem;
+  flex: 1;
+}
+.full-page[_ngcontent-ng-c3144394989] {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  flex-direction: column;
+}
+.page-header[_ngcontent-ng-c3144394989] {
+  text-align: center;
+  padding: 2rem 1rem;
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+.page-title[_ngcontent-ng-c3144394989] {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.page-subtitle[_ngcontent-ng-c3144394989] {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+}
+.grid-item[_ngcontent-ng-c3144394989] {
+  padding: 0;
+  font-size: 15px;
+  height: 100%;
+}
+.side-panel[_ngcontent-ng-c3144394989] {
+  position: sticky;
+  background-color: #ffffff;
+  width: 300px;
+  margin-top: 2rem;
+  height: fit-content;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+.form-size[_ngcontent-ng-c3144394989] {
+  height: 250px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+.previous[_ngcontent-ng-c3144394989] {
+  background-color: #f1f1f1;
+  color: black;
+}
+.input-w[_ngcontent-ng-c3144394989] {
+  width: 93%;
+  margin-left: 44px;
+}
+.f1-pos[_ngcontent-ng-c3144394989] {
+  margin-top: 12%;
+}
+.user-b[_ngcontent-ng-c3144394989] {
+  background-color: #f1f1f1;
+  border-radius: 50px;
+}
+.user-i[_ngcontent-ng-c3144394989] {
+  font-size: 18px;
+}
+.logout-b[_ngcontent-ng-c3144394989] {
+  font-size: 14px;
+}
+#information[_ngcontent-ng-c3144394989] {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#information[_ngcontent-ng-c3144394989]   td[_ngcontent-ng-c3144394989], #customers[_ngcontent-ng-c3144394989]   th[_ngcontent-ng-c3144394989] {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#information[_ngcontent-ng-c3144394989]   tr[_ngcontent-ng-c3144394989]:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#information[_ngcontent-ng-c3144394989]   tr[_ngcontent-ng-c3144394989]:hover {
+  background-color: #ddd;
+}
+#information[_ngcontent-ng-c3144394989]   th[_ngcontent-ng-c3144394989] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5e0147;
+  color: white;
+}
+.button-format[_ngcontent-ng-c3144394989] {
+  background-color: rgb(46, 2, 2);
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button-format[_ngcontent-ng-c3144394989]:hover {
+  background-color: rgb(60, 8, 8);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card[_ngcontent-ng-c3144394989] {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.card[_ngcontent-ng-c3144394989]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.margin-top[_ngcontent-ng-c3144394989] {
+  margin-top: 0;
+}
+.price[_ngcontent-ng-c3144394989] {
+  color: grey;
+  font-size: 22px;
+}
+.card[_ngcontent-ng-c3144394989]   button[_ngcontent-ng-c3144394989] {
+  border: none;
+  outline: 0;
+  padding: 12px 16px;
+  color: white;
+  background-color: #2c1810;
+  text-align: center;
+  cursor: pointer;
+  width: 48%;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.card[_ngcontent-ng-c3144394989]   button[_ngcontent-ng-c3144394989]:hover {
+  background-color: #8b4513;
+  transform: translateY(-1px);
+}
+.card-image[_ngcontent-ng-c3144394989] {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      var(--gray-100) 0%,
+      var(--gray-200) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img[_ngcontent-ng-c3144394989] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+.card[_ngcontent-ng-c3144394989]:hover   .card-img[_ngcontent-ng-c3144394989] {
+  transform: scale(1.05);
+}
+.card-placeholder[_ngcontent-ng-c3144394989] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  color: var(--white);
+  text-align: center;
+}
+.placeholder-icon[_ngcontent-ng-c3144394989] {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+.placeholder-text[_ngcontent-ng-c3144394989] {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.9;
+  line-height: 1.2;
+  max-width: 80%;
+}
+.card-content[_ngcontent-ng-c3144394989] {
+  padding: 1.5rem;
+}
+.card-header[_ngcontent-ng-c3144394989] {
+  margin-bottom: 1rem;
+}
+.card-title[_ngcontent-ng-c3144394989] {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c1810;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.card-badges[_ngcontent-ng-c3144394989] {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.card-issuer[_ngcontent-ng-c3144394989] {
+  display: inline-block;
+  background: #8b4513;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.card-category[_ngcontent-ng-c3144394989] {
+  display: inline-block;
+  background: #d2691e;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.card-details[_ngcontent-ng-c3144394989] {
+  margin-bottom: 1rem;
+}
+.detail-row[_ngcontent-ng-c3144394989] {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.detail-row[_ngcontent-ng-c3144394989]:last-child {
+  border-bottom: none;
+}
+.detail-label[_ngcontent-ng-c3144394989] {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+  flex: 0 0 40%;
+}
+.detail-value[_ngcontent-ng-c3144394989] {
+  font-weight: 500;
+  color: #2c1810;
+  font-size: 0.9rem;
+  text-align: right;
+  flex: 1;
+}
+.detail-value.bonus[_ngcontent-ng-c3144394989] {
+  color: #28a745;
+  font-weight: 600;
+}
+.card-description[_ngcontent-ng-c3144394989] {
+  margin-bottom: 1.5rem;
+}
+.card-description[_ngcontent-ng-c3144394989]   p[_ngcontent-ng-c3144394989] {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+.card-actions[_ngcontent-ng-c3144394989] {
+  display: flex;
+  gap: 0.75rem;
+}
+.action-btn[_ngcontent-ng-c3144394989] {
+  border: none;
+  outline: 0;
+  padding: 12px 16px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.details-btn[_ngcontent-ng-c3144394989] {
+  background-color: #2c1810;
+}
+.details-btn[_ngcontent-ng-c3144394989]:hover {
+  background-color: #8b4513;
+  transform: translateY(-1px);
+}
+.compare-btn[_ngcontent-ng-c3144394989] {
+  background-color: #d2691e;
+}
+.compare-btn[_ngcontent-ng-c3144394989]:hover {
+  background-color: #b85a1a;
+  transform: translateY(-1px);
+}
+.compare-btn.added-to-compare[_ngcontent-ng-c3144394989] {
+  background-color: #28a745;
+  color: white;
+}
+.compare-btn.added-to-compare[_ngcontent-ng-c3144394989]:hover {
+  background-color: #218838;
+}
+.icon[_ngcontent-ng-c3144394989] {
+  font-size: 14px;
+}
+ul[_ngcontent-ng-c3144394989]   li[_ngcontent-ng-c3144394989] {
+  height: 40px;
+  background: #2c1810;
+  color: white;
+  margin: 8px;
+  font-size: 14px;
+  list-style-type: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+li[_ngcontent-ng-c3144394989] {
+  display: flex;
+  gap: 50%;
+  margin-left: 4%;
+}
+.btn-format[_ngcontent-ng-c3144394989] {
+  border: none;
+  outline: 0;
+  padding: 12px 16px;
+  color: white;
+  background-color: #2c1810;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 16px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.btn-format[_ngcontent-ng-c3144394989]:hover {
+  background-color: #8b4513;
+  transform: translateY(-1px);
+}
+.side-panel[_ngcontent-ng-c3144394989]   h3[_ngcontent-ng-c3144394989] {
+  padding: 1rem;
+  margin: 0;
+  background-color: #2c1810;
+  color: white;
+  border-radius: 12px 12px 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.side-panel[_ngcontent-ng-c3144394989]   ul[_ngcontent-ng-c3144394989] {
+  padding: 1rem;
+  margin: 0;
+}
+.comparison-list[_ngcontent-ng-c3144394989] {
+  padding: 1rem;
+}
+.comparison-item[_ngcontent-ng-c3144394989] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e9ecef;
+}
+.item-info[_ngcontent-ng-c3144394989] {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+.item-placeholder[_ngcontent-ng-c3144394989] {
+  width: 40px;
+  height: 25px;
+  border-radius: 4px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+.item-icon[_ngcontent-ng-c3144394989] {
+  font-size: 0.8rem;
+}
+.item-details[_ngcontent-ng-c3144394989] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+.item-name[_ngcontent-ng-c3144394989] {
+  font-weight: 600;
+  color: #2c1810;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+.item-issuer[_ngcontent-ng-c3144394989] {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+.item-category[_ngcontent-ng-c3144394989] {
+  font-size: 0.75rem;
+  color: #8b4513;
+  background: #f8f9fa;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+.item-fee[_ngcontent-ng-c3144394989] {
+  font-size: 0.8rem;
+  color: #28a745;
+  font-weight: 600;
+}
+.remove-btn[_ngcontent-ng-c3144394989] {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+.remove-btn[_ngcontent-ng-c3144394989]:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+.empty-state[_ngcontent-ng-c3144394989] {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+}
+.empty-icon[_ngcontent-ng-c3144394989] {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+.empty-state[_ngcontent-ng-c3144394989]   p[_ngcontent-ng-c3144394989] {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.empty-state[_ngcontent-ng-c3144394989]   small[_ngcontent-ng-c3144394989] {
+  font-size: 0.8rem;
+}
+.sidebar-actions[_ngcontent-ng-c3144394989] {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.clear-btn[_ngcontent-ng-c3144394989] {
+  background-color: #6c757d;
+}
+.clear-btn[_ngcontent-ng-c3144394989]:hover {
+  background-color: #5a6268;
+}
+@media (max-width: 768px) {
+  .grid-container[_ngcontent-ng-c3144394989] {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .side-panel[_ngcontent-ng-c3144394989] {
+    width: 100%;
+    margin: 1rem;
+    position: relative;
+  }
+  .full-page[_ngcontent-ng-c3144394989] {
+    flex-direction: column;
+  }
+  .card[_ngcontent-ng-c3144394989]   button[_ngcontent-ng-c3144394989] {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+.form-size[_ngcontent-ng-c3144394989] {
+  height: 250px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+.previous[_ngcontent-ng-c3144394989] {
+  background-color: #f1f1f1;
+  color: black;
+}
+.input-w[_ngcontent-ng-c3144394989] {
+  width: 93%;
+  margin-left: 44px;
+}
+.f1-pos[_ngcontent-ng-c3144394989] {
+  margin-top: 12%;
+}
+.user-b[_ngcontent-ng-c3144394989] {
+  background-color: #f1f1f1;
+  border-radius: 50px;
+}
+.user-i[_ngcontent-ng-c3144394989] {
+  font-size: 18px;
+}
+.logout-b[_ngcontent-ng-c3144394989] {
+  font-size: 14px;
+}
+#information[_ngcontent-ng-c3144394989] {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#information[_ngcontent-ng-c3144394989]   td[_ngcontent-ng-c3144394989], #customers[_ngcontent-ng-c3144394989]   th[_ngcontent-ng-c3144394989] {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#information[_ngcontent-ng-c3144394989]   tr[_ngcontent-ng-c3144394989]:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#information[_ngcontent-ng-c3144394989]   tr[_ngcontent-ng-c3144394989]:hover {
+  background-color: #ddd;
+}
+#information[_ngcontent-ng-c3144394989]   th[_ngcontent-ng-c3144394989] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5e0147;
+  color: white;
+}
+.button-format[_ngcontent-ng-c3144394989] {
+  background-color: rgb(46, 2, 2);
+  color: #eeeded;
+  height: 40px;
+  width: 30%;
+  border-radius: 20px;
+  font-size: medium;
+  font-family:
+    Cambria,
+    Cochin,
+    Georgia,
+    Times,
+    "Times New Roman",
+    serif;
+  margin-top: 40px;
+  margin-left: 35%;
+}
+.card[_ngcontent-ng-c3144394989] {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.margin-top[_ngcontent-ng-c3144394989] {
+  margin-top: 5%;
+}
+.price[_ngcontent-ng-c3144394989] {
+  color: grey;
+  font-size: 22px;
+}
+.card[_ngcontent-ng-c3144394989]   button[_ngcontent-ng-c3144394989] {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: purple;
+  text-align: center;
+  cursor: pointer;
+  width: 46%;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.card[_ngcontent-ng-c3144394989]   button[_ngcontent-ng-c3144394989]:hover {
+  opacity: 0.7;
+}
+ul[_ngcontent-ng-c3144394989]   li[_ngcontent-ng-c3144394989] {
+  height: 30px;
+  background: rgb(174, 121, 174);
+  color: white;
+  margin: 5px;
+  font-size: medium;
+  list-style-type: none;
+}
+li[_ngcontent-ng-c3144394989] {
+  display: flex;
+  gap: 50%;
+  margin-left: 4%;
+}
+.btn-format[_ngcontent-ng-c3144394989] {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: brown;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 12px;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=browse-cards.component.css.map */</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c3984273398="" ng-version="17.1.1" ngh="1" ng-server-context="ssg"><router-outlet _ngcontent-ng-c3984273398=""></router-outlet><app-browse-cards _nghost-ng-c3144394989="" ngh="0"><div _ngcontent-ng-c3144394989="" class="page-bg"><nav _ngcontent-ng-c3144394989="" class="navbar navbar-expand-sm fixed-top"><div _ngcontent-ng-c3144394989="" class="nav-height"><div _ngcontent-ng-c3144394989="" class="d-flex flex-row container-fluid"><div _ngcontent-ng-c3144394989="" style="width: 1400px;"><a _ngcontent-ng-c3144394989="" href="#" class="navbar-brand text-light mt-4"> WhichCard? </a><p _ngcontent-ng-c3144394989="" class="navbar-brand text-light mt-4"> Browse Cards </p></div><div _ngcontent-ng-c3144394989=""><a _ngcontent-ng-c3144394989="" href="#" class="btn btn-lg mt-2 p-4 user-b"><span _ngcontent-ng-c3144394989="" class="glyphicon glyphicon-user user-i"></span></a></div><div _ngcontent-ng-c3144394989="" class="p-3"><button _ngcontent-ng-c3144394989="" type="button" class="btn btn-outline-light p-3 logout-b nav-button">log out</button></div></div></div></nav><div _ngcontent-ng-c3144394989="" class="full-page"><div _ngcontent-ng-c3144394989="" class="page-header"><h1 _ngcontent-ng-c3144394989="" class="page-title">Browse Credit Cards</h1><p _ngcontent-ng-c3144394989="" class="page-subtitle">Compare and find the perfect credit card for your needs</p></div><div _ngcontent-ng-c3144394989="" class="grid-container"><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="assets/images/cards/chase-sapphire-preferred-real.jpg" alt="Chase Sapphire Preferred"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Chase Sapphire Preferred</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Chase</span><span _ngcontent-ng-c3144394989="" class="card-category">Travel</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">21.49% - 28.49%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$95</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">2x points on travel &amp; dining, 1x on all other purchases</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">60,000 points after spending $4,000 in first 3 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Premium travel rewards card with excellent redemption value</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Capital One Venture Rewards"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Capital One Venture Rewards</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Capital One</span><span _ngcontent-ng-c3144394989="" class="card-category">Travel</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">19.99% - 29.99%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$95</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">2x miles on all purchases</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">75,000 miles after spending $4,000 in first 3 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Flexible travel rewards with no blackout dates</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="American Express Gold Card"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">American Express Gold Card</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">American Express</span><span _ngcontent-ng-c3144394989="" class="card-category">Dining</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">19.24% - 28.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$250</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">4x points on dining &amp; groceries, 3x on flights</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">60,000 points after spending $4,000 in first 6 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Premium dining and grocery rewards card</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Citi Double Cash"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Citi Double Cash</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Citi</span><span _ngcontent-ng-c3144394989="" class="card-category">Cash Back</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">19.24% - 29.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">2% cash back (1% when you buy, 1% when you pay)</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">$200 after spending $1,500 in first 6 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Simple, straightforward cash back with no annual fee</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Discover it Cash Back"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Discover it Cash Back</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Discover</span><span _ngcontent-ng-c3144394989="" class="card-category">Cash Back</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">17.24% - 28.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">5% rotating categories, 1% on all other purchases</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">Cashback Match for first year</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Rotating 5% categories with first-year bonus</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Wells Fargo Active Cash"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Wells Fargo Active Cash</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Wells Fargo</span><span _ngcontent-ng-c3144394989="" class="card-category">Cash Back</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">20.24% - 29.99%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">2% unlimited cash back on all purchases</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">$200 after spending $1,000 in first 3 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Unlimited 2% cash back with no annual fee</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Chase Freedom Unlimited"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Chase Freedom Unlimited</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Chase</span><span _ngcontent-ng-c3144394989="" class="card-category">Cash Back</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">20.49% - 29.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">5% on travel through Chase, 3% on dining &amp; drugstores, 1.5% on all other purchases</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">$200 after spending $500 in first 3 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Flexible cash back with bonus categories</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="American Express Blue Cash Preferred"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">American Express Blue Cash Preferred</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">American Express</span><span _ngcontent-ng-c3144394989="" class="card-category">Groceries</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">19.24% - 29.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$95</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">6% on groceries, 6% on streaming, 3% on transit &amp; gas</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">$350 after spending $3,000 in first 6 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">High rewards on groceries and streaming services</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Capital One SavorOne"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Capital One SavorOne</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Capital One</span><span _ngcontent-ng-c3144394989="" class="card-category">Dining</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">19.99% - 29.99%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">3% on dining, entertainment &amp; streaming, 5% on hotels &amp; rental cars</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">$200 after spending $500 in first 3 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">No annual fee dining and entertainment rewards</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Bank of America Customized Cash Rewards"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Bank of America Customized Cash Rewards</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Bank of America</span><span _ngcontent-ng-c3144394989="" class="card-category">Cash Back</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">18.99% - 28.99%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">3% in your choice category, 2% at grocery stores &amp; wholesale clubs</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">$200 after spending $1,000 in first 90 days</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Customizable cash back categories</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Chase Ink Business Preferred"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Chase Ink Business Preferred</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Chase</span><span _ngcontent-ng-c3144394989="" class="card-category">Business</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">21.24% - 26.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$95</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">3x points on travel, shipping, internet, cable, phone, advertising</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">100,000 points after spending $8,000 in first 3 months</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Premium business rewards card</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><div _ngcontent-ng-c3144394989="" class="grid-item"><div _ngcontent-ng-c3144394989="" class="card margin-top"><div _ngcontent-ng-c3144394989="" class="card-image"><img _ngcontent-ng-c3144394989="" class="card-img" src="" alt="Discover it Miles"></div><div _ngcontent-ng-c3144394989="" class="card-content"><div _ngcontent-ng-c3144394989="" class="card-header"><h3 _ngcontent-ng-c3144394989="" class="card-title">Discover it Miles</h3><div _ngcontent-ng-c3144394989="" class="card-badges"><span _ngcontent-ng-c3144394989="" class="card-issuer">Discover</span><span _ngcontent-ng-c3144394989="" class="card-category">Travel</span></div></div><div _ngcontent-ng-c3144394989="" class="card-details"><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">APR:</span><span _ngcontent-ng-c3144394989="" class="detail-value">17.24% - 28.24%</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Annual Fee:</span><span _ngcontent-ng-c3144394989="" class="detail-value">$0</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Rewards:</span><span _ngcontent-ng-c3144394989="" class="detail-value">1.5x miles on all purchases</span></div><div _ngcontent-ng-c3144394989="" class="detail-row"><span _ngcontent-ng-c3144394989="" class="detail-label">Sign-up Bonus:</span><span _ngcontent-ng-c3144394989="" class="detail-value bonus">Miles Match for first year</span></div></div><div _ngcontent-ng-c3144394989="" class="card-description"><p _ngcontent-ng-c3144394989="">Simple travel rewards with first-year bonus</p></div><div _ngcontent-ng-c3144394989="" class="card-actions"><button _ngcontent-ng-c3144394989="" class="action-btn details-btn"><i _ngcontent-ng-c3144394989="" class="icon">📋</i> View Details </button><button _ngcontent-ng-c3144394989="" class="action-btn compare-btn"><i _ngcontent-ng-c3144394989="" class="icon">⚖️</i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><span _ngcontent-ng-c3144394989="">Compare</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></button></div></div></div></div><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></div><div _ngcontent-ng-c3144394989="" class="side-panel fixed-right"><h3 _ngcontent-ng-c3144394989="" class="px-3 mt-3">In Comparison (0)</h3><div _ngcontent-ng-c3144394989="" class="empty-state"><div _ngcontent-ng-c3144394989="" class="empty-icon">⚖️</div><p _ngcontent-ng-c3144394989="">No cards selected for comparison</p><small _ngcontent-ng-c3144394989="">Click "Compare" on any card to add it here</small></div><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div></app-browse-cards><!--container--></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"22":"t0","26":"t3","27":"t4","29":"t5"},"c":{"22":[{"i":"t0","r":1,"t":{"45":"t1","46":"t2"},"c":{"45":[],"46":[{"i":"t2","r":1}]},"x":12}],"26":[{"i":"t4","r":1}],"27":[],"29":[]}},{"c":{"0":[{"i":"c3144394989","r":1}]}}]}</script></body></html>

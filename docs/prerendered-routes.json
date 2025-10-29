@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/browseCards",
-    "/compare",
-    "/home",
-    "/selection",
-    "/wallet"
-  ]
-}
